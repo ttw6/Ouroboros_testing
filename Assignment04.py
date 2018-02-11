@@ -2,21 +2,16 @@
 
 
 
-def return_sum()
+def return_sum(list):
+	sum = 0
+	for elem in list:
+		sum += elem
+	return sum
 
 
+def return_min_max():
+	pass
 
 
-
-
-
-def return_min_max()
-
-
-
-
-
-
-
-
-def return_max_difference()
+def return_max_difference():
+	pass
