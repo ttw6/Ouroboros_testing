@@ -21,9 +21,9 @@ def return_max_difference(input_list):
     diffs = abs(np.diff(input_list))
     max_val = max(diffs)
 
-    return max_val
+   return max_val
 
 
 if __name__ == "__main__":
-    main()
+   main()
 
