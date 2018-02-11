@@ -14,16 +14,16 @@ def return_min_max(my_list):
 
     
 def return_sum(my_list):
-	sum = 0
-	for elem in my_list:
-		sum += elem
-	return sum
+   sum = 0
+   for elem in my_list:
+      sum += elem
+   return sum
 
 
 
 
 def return_max_difference(my_list):
-	pass
+   pass
 
 
 if __name__ == "__main__":
