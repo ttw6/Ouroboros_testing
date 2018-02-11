@@ -1,12 +1,10 @@
 # This is our first assignment as a group
 
 def main():
-#   return_sum()
-   max_min = return_min_max()
-#   return_max_difference()
+   return_sum(my_list)
+   return_min_max(my_list)
+   return_max_difference(my_list)
 
-
-#def return_sum():
 
 
 def return_min_max(my_list):
@@ -14,12 +12,20 @@ def return_min_max(my_list):
    return max_min
 
 
+    
+def return_sum(my_list):
+	sum = 0
+	for elem in my_list:
+		sum += elem
+	return sum
 
 
 
-#def return_max_difference():
 
+def return_max_difference(my_list):
+	pass
 
 
 if __name__ == "__main__":
    main()
+
