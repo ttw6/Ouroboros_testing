@@ -16,7 +16,7 @@ def return_sum(my_list):
    sum = 0
    for elem in my_list:
       sum += elem
-	 return sum
+   return sum
 
 
 def return_max_difference(input_list):
