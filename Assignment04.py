@@ -8,7 +8,16 @@ def main():
 
 
 def return_min_max(my_list):
-   max_min = ((max(my_list), min(my_list)))
+   
+   try:
+       max_min = ((max(my_list), min(my_list)))
+   except TypeError:
+      print("You did not input a list of number")
+   except ValueError:
+      print("The input type is correct but inappropriate")   
+   except ImportError:
+      print("Could not import the list")
+   
    return max_min
 
 
