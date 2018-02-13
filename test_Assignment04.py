@@ -3,19 +3,19 @@
 import pytest
 
 def test_sum():
-   from Assignment04 import return_sum
-   test1 = return_sum([1,3,5,7,9])
-   test2 = return_sum([-2,-5,-6,-1])
-   test3 = return_sum([4,-6,9,-1])
-   test4 = return_sum([2.2, 5.1 ,9.1, 1.2])
-   test5 = return_sum([-1.1, -5.2, -1.4, -3.8])
-   test6 = return_sum([-1.1,2.2,-3.1])    
-   assert test1 == 25
-   assert test2 == -14
-   assert test3 == 6
-   assert test4 == pytest.approx(17.6)
-   assert test5 == pytest.approx(-11.5)
-   assert test6 == pytest.approx(-2)
+    from Assignment04 import return_sum
+    test1 = return_sum([1,3,5,7,9])
+    test2 = return_sum([-2,-5,-6,-1])
+    test3 = return_sum([4,-6,9,-1])
+    test4 = return_sum([2.2, 5.1 ,9.1, 1.2])
+    test5 = return_sum([-1.1, -5.2, -1.4, -3.8])
+    test6 = return_sum([-1.1,2.2,-3.1])
+    assert test1 == 25
+    assert test2 == -14
+    assert test3 == 6
+    assert test4 == pytest.approx(17.6)
+    assert test5 == pytest.approx(-11.5)
+    assert test6 == pytest.approx(-2)
     
     
 # Second function
@@ -29,6 +29,13 @@ def test_return_min_max():
       assert min_max_output == test_output_values[count]
       assert isinstance(min_max_output, tuple) == True 
 
+def test_max_diff():
+    from Assignment04 import return_max_difference
+    test_input_list = [[10, 8, 5, 17, 16], [2, -7, 1.5]]
+    test_output_value = [12, 9]
+    for n, t in enumerate(test_input_list):
+        test_output = return_max_difference(t)
+        assert test_output == test_output_value[n]
 
 
 
