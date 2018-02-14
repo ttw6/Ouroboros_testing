@@ -20,11 +20,18 @@ def return_sum(my_list):
 
 
 def return_max_difference(input_list):
-   input_list = np.array(input_list)
-   diffs = abs(np.diff(input_list))
-   max_val = max(diffs)
+   try:
+      input_list = np.array(input_list)
+      diffs = abs(np.diff(input_list))
+      max_val = max(diffs)
 
-   return max_val
+      return max_val
+   except ImportError:
+      print('Not valid module')
+   except TypeError:
+      print('Input is not a list')
+   except ValueError:
+      pass
 
 
 if __name__ == "__main__":

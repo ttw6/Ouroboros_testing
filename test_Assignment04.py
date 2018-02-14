@@ -36,5 +36,7 @@ def test_max_diff():
     for n, t in enumerate(test_input_list):
         test_output = return_max_difference(t)
         assert test_output == test_output_value[n]
+    with pytest.raises(TypeError):
+        return_max_difference()
 
 
