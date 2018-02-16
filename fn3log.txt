@@ -1,0 +1,5 @@
+02/15/2018 02:01:46 PM INFO Start fn
+02/15/2018 02:01:46 PM INFO Max val: 9.0
+02/15/2018 02:02:15 PM INFO Start fn
+02/15/2018 02:02:15 PM DEBUG Values []
+02/15/2018 02:02:15 PM ERROR ValueError: Add more numbers to the list
