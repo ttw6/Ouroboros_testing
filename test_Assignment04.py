@@ -17,7 +17,10 @@ def test_sum():
     assert test4 == pytest.approx(17.6)
     assert test5 == pytest.approx(-11.5)
     assert test6 == pytest.approx(-2)
-    
+    with pytest.raises(TypeError):
+        return_sum(['hello', 'hi'])
+    with pytest.raises(ValueError):
+        return_sum([])
     
 # Second function
 def test_return_min_max():

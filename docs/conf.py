@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 
 project = 'Ouroboros_doc'
-copyright = '2018, Petek Sener'
+copyright = '2018, Petek Sener, Alex Sheu, Tiffany Wu'
 author = 'Petek Sener, Alex Sheu, Tiffany Wu'
 
 
@@ -107,8 +107,6 @@ html_static_path = ['_static']
 
 htmlhelp_basename = 'Ouroboros_docdoc'
 
-
-
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
@@ -134,6 +132,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
 
+
     (master_doc, 'Ouroboros_doc.tex', 'Ouroboros\\_doc Documentation',
      'Petek Sener, Alex Sheu, Tiffany Wu', 'manual'),
 
@@ -145,10 +144,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-
     (master_doc, 'ouroboros_doc', 'Ouroboros_doc Documentation',[author],1)
-
-     [author], 1)
 ]
 
 
@@ -167,3 +163,4 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+

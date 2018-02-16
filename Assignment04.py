@@ -41,16 +41,39 @@ def return_min_max(my_list):
     except ValueError:
         print("The input type is correct but inappropriate")  
     
-
     max_min = ((np.max(my_list), np.min(my_list)))
     return max_min
     
   
 def return_sum(my_list):
+
+    """
+    :param my_list: list containing real numbers to be summed
+    :raises: TypeError if list cannot be summed
+    :raises: ValueError if no elements in given list
+    :returns: sum of all elements in the list
+    """
+    import logging
+    logging.basicConfig(filename='sumlog.txt', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s', datefmt='%H:%M:%S')
+    with open('sumlog.txt', 'w'):
+        pass
+    logging.info('Function starting')
+
+    try:
+        np.sum(my_list)
+    except TypeError:
+        print('Input list should be numbers')        
+        logging.debug('Given list does not contain summable elements')
+    
+    if len(my_list) == 0:
+        raise ValueError('No elements in list to be summed')
+        logging.warning('No elements present to be summed')
+
+
     sum = 0
     for elem in my_list:
         sum += elem
-
+    logging.info('Elements have been summed')
     return sum
 
 
