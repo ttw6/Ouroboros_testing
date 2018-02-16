@@ -19,9 +19,11 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
+
 project = 'Ouroboros_doc'
-copyright = '2018, Alex Sheu'
-author = 'Alex Sheu'
+copyright = '2018, Petek Sener, Alex Sheu, Tiffany Wu'
+author = 'Petek Sener, Alex Sheu, Tiffany Wu'
+
 
 # The short X.Y version
 version = ''
@@ -39,6 +41,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -101,8 +104,8 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Ouroboros_docdoc'
 
+htmlhelp_basename = 'Ouroboros_docdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -128,8 +131,11 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
+
+
     (master_doc, 'Ouroboros_doc.tex', 'Ouroboros\\_doc Documentation',
-     'Alex Sheu', 'manual'),
+     'Petek Sener, Alex Sheu, Tiffany Wu', 'manual'),
+
 ]
 
 
@@ -138,8 +144,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ouroboros_doc', 'Ouroboros_doc Documentation',
-     [author], 1)
+    (master_doc, 'ouroboros_doc', 'Ouroboros_doc Documentation',[author],1)
 ]
 
 
@@ -149,7 +154,13 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
+
     (master_doc, 'Ouroboros_doc', 'Ouroboros_doc Documentation',
      author, 'Ouroboros_doc', 'One line description of project.',
+
      'Miscellaneous'),
 ]
+
+
+# -- Extension configuration -------------------------------------------------
+

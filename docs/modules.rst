@@ -5,5 +5,4 @@ Ouroboros_testing
    :maxdepth: 4
 
    Assignment04
-   conf
    test_Assignment04
