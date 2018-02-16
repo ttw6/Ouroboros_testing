@@ -28,7 +28,14 @@ def test_return_min_max():
     for count, elem in enumerate(test_input_list):   #enuerate itirate and gives the index
         min_max_output = return_min_max(elem)
         assert min_max_output == test_output_values[count]
-        assert isinstance(min_max_output, tuple) == True
+        assert isinstance(min_max_output, tuple) == True 
+
+def test_return_min_max_exceptions():
+    from Assignment04 import return_min_max
+    with pytest.raises(TypeError):
+        return_min_max(['string','why'])
+    with pytest.raises(ValueError):
+        return_min_max([])
 
 
 def test_max_diff():
@@ -46,6 +53,7 @@ def test_max_diff():
         return_max_difference(['sing'])
     with pytest.raises(ValueError):  # ValueError can occur when only 1 number given
         max([])  # This is where it fails in return_max_difference
+
 
 
 

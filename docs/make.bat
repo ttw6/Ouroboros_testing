@@ -1,3 +1,4 @@
+
 @ECHO OFF
 
 pushd %~dp0
@@ -9,7 +10,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=Ouroboros_Assignment05
+set SPHINXPROJ=Ouroboros_doc
 
 if "%1" == "" goto help
 

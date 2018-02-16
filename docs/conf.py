@@ -19,9 +19,11 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Ouroboros_Assignment05'
-copyright = '2018, Alex Sheu, Petek Sener, Tiffany Wu'
-author = 'Alex Sheu, Petek Sener, Tiffany Wu'
+
+project = 'Ouroboros_doc'
+copyright = '2018, Petek Sener'
+author = 'Petek Sener, Alex Sheu, Tiffany Wu'
+
 
 # The short X.Y version
 version = ''
@@ -102,7 +104,9 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Ouroboros_Assignment05doc'
+
+htmlhelp_basename = 'Ouroboros_docdoc'
+
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -129,8 +133,10 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Ouroboros_Assignment05.tex', 'Ouroboros\\_Assignment05 Documentation',
-     'Alex Sheu, Petek Sener, Tiffany Wu', 'manual'),
+
+    (master_doc, 'Ouroboros_doc.tex', 'Ouroboros\\_doc Documentation',
+     'Petek Sener, Alex Sheu, Tiffany Wu', 'manual'),
+
 ]
 
 
@@ -139,7 +145,9 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ouroboros_assignment05', 'Ouroboros_Assignment05 Documentation',
+
+    (master_doc, 'ouroboros_doc', 'Ouroboros_doc Documentation',[author],1)
+
      [author], 1)
 ]
 
@@ -150,8 +158,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Ouroboros_Assignment05', 'Ouroboros_Assignment05 Documentation',
-     author, 'Ouroboros_Assignment05', 'One line description of project.',
+
+    (master_doc, 'Ouroboros_doc', 'Ouroboros_doc Documentation',
+     author, 'Ouroboros_doc', 'One line description of project.',
+
      'Miscellaneous'),
 ]
 

@@ -4,7 +4,9 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = Ouroboros_Assignment05
+
+SPHINXPROJ    = Ouroboros_doc
+
 SOURCEDIR     = .
 BUILDDIR      = _build
 
