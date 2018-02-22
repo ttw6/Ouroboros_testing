@@ -11,6 +11,8 @@ Welcome to Ouroboros_doc's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   mylist
+   test_mylist
    Assignment04
    test_Assignment04
 
