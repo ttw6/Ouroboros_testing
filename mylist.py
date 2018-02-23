@@ -19,7 +19,8 @@ class MyList:
         """
         import numpy as np
         import logging
-        logging.basicConfig(filename='sumlog.txt', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s',
+        logging.basicConfig(filename='sumlog.txt', level=logging.DEBUG,
+                            format='%(asctime)s %(levelname)s %(message)s',
                             datefmt='%H:%M:%S')
         with open('sumlog.txt', 'w'):
             pass
@@ -35,11 +36,11 @@ class MyList:
             raise ValueError('No elements in list to be summed')
             logging.warning('No elements present to be summed')
 
-        #self.output_sum = sum(self.numbers)
-        #self.output_sum = 0
-        #for elem in self.numbers:
+        # self.output_sum = sum(self.numbers)
+        # self.output_sum = 0
+        # for elem in self.numbers:
         #    self.output_sum = sum(elem)
-        #logging.info('Elements have been summed')
+        # logging.info('Elements have been summed')
 
     def return_min_max(self):
         """ Function returns the max and min value of the input list
@@ -51,7 +52,8 @@ class MyList:
             """
         import numpy as np
         import logging
-        logging.basicConfig(filename="OuroborosAssignment04log.txt", format='%(asctime)s %(message)s',
+        logging.basicConfig(filename="OuroborosAssignment04log.txt",
+                            format='%(asctime)s %(message)s',
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         logging.info('Started')
 
@@ -70,13 +72,15 @@ class MyList:
     def return_max_diff(self):
         """Function will return maximum difference between adjacent numbers.
 
-        Function takes in the inputted list of values, splits it into two arrays to calculate the difference between
-        adjacent values, takes the absolute values of the differences to disregard positioning, and then outputs the
-        maximum value.
+        Function takes in the inputted list of values, splits it into two
+        arrays to calculate the difference between adjacent values, takes the
+        absolute values of the differences to disregard positioning, and then
+        outputs the maximum value.
 
         :param self: List of numbers
         :return: Maximum difference
-        :raises ImportError: Check if numpy is installed or virtual env is established
+        :raises ImportError: Check if numpy is installed or
+        virtual env is established
         :raises TypeError: Input not given as a list of values
         :raises ValueError: Can occur when only 1 number is given in the list
         """
@@ -84,7 +88,8 @@ class MyList:
         import numpy as np
         import logging
         # Setup log
-        logging.basicConfig(filename='fn3log.txt', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s',
+        logging.basicConfig(filename='fn3log.txt', level=logging.DEBUG,
+                            format='%(asctime)s %(levelname)s %(message)s',
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         # Function
         try:
@@ -97,7 +102,7 @@ class MyList:
             self.output_max_diff = max(diffs)
 
             logging.info('Max val: {}'.format(self.output_max_diff))
-            #return max_val
+            # return max_val
 
         except ImportError:  # redundancy
             logging.debug('Values {}'.format(self.numbers))
@@ -112,5 +117,3 @@ class MyList:
             logging.debug('Values {}'.format(self.numbers))
             logging.error('ValueError: Add more numbers to the list')
             # print('Add more numbers to the list')
-
-

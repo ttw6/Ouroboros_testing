@@ -1,6 +1,6 @@
 # This is our first assignment as a group
 
-try: 
+try:
     import numpy as np
 except ImportError:
     print("Could not import numpy")
@@ -10,18 +10,18 @@ try:
 except ImportError:
     print("Could not import logging")
 
-import sphinx 
-
 
 def main():
-    logging.basicConfig(filename="OuroborosAssignment04log.txt", format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    logging.basicConfig(filename="OuroborosAssignment04log.txt",
+                        format='%(asctime)s %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p')
     logging.info('Started')
     return_sum(my_list)
     return_min_max(my_list)
     return_max_difference(my_list)
     logging.info('Finished')
 
-    
+
 def return_min_max(my_list):
     """ Function returns the max and min value of the input list
 
@@ -39,14 +39,13 @@ def return_min_max(my_list):
         logging.debug('my_list is {}'.format(my_list))
         print("You did not input a list of numbers")
     except ValueError:
-        print("The input type is correct but inappropriate")  
-    
-    max_min = ((np.max(my_list), np.min(my_list)))
-    return max_min
-    
-  
-def return_sum(my_list):
+        print("The input type is correct but inappropriate")
 
+    max_min = ((np.max(my_list)), (np.min(my_list)))
+    return max_min
+
+
+def return_sum(my_list):
     """
     :param my_list: list containing real numbers to be summed
     :raises: TypeError if list cannot be summed
@@ -54,7 +53,9 @@ def return_sum(my_list):
     :returns: sum of all elements in the list
     """
     import logging
-    logging.basicConfig(filename='sumlog.txt', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s', datefmt='%H:%M:%S')
+    logging.basicConfig(filename='sumlog.txt', level=logging.DEBUG,
+                        format='%(asctime)s %(levelname)s %(message)s',
+                        datefmt='%H:%M:%S')
     with open('sumlog.txt', 'w'):
         pass
     logging.info('Function starting')
@@ -62,13 +63,12 @@ def return_sum(my_list):
     try:
         np.sum(my_list)
     except TypeError:
-        print('Input list should be numbers')        
+        print('Input list should be numbers')
         logging.debug('Given list does not contain summable elements')
-    
-    if len(my_list) == 0:
-        raise ValueError('No elements in list to be summed')
-        logging.warning('No elements present to be summed')
 
+    if len(my_list) == 0:
+        logging.warning('No elements present to be summed')
+        raise ValueError('No elements in list to be summed')
 
     sum = 0
     for elem in my_list:
@@ -80,23 +80,25 @@ def return_sum(my_list):
 def return_max_difference(input_list):
     """Function will return maximum difference between adjacent numbers.
 
-    Function takes in the inputted list of values, splits it into two arrays to calculate the difference between
-    adjacent values, takes the absolute values of the differences to disregard positioning, and then outputs the
+    Function takes in the inputted list of values, splits it into two arrays
+    to calculate the difference between adjacent values, takes the absolute
+    values of the differences to disregard positioning, and then outputs the
     maximum value.
 
     :param input_list: List of numbers
     :return: Maximum difference
-    :raises ImportError: Check if numpy is installed or virtual env is established
+    :raises ImportError: Check if numpy is installed or virt env is established
     :raises TypeError: Input not given as a list of values
     :raises ValueError: Can occur when only 1 number is given in the list
     """
     # Setup log
-    logging.basicConfig(filename='fn3log.txt', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s',
+    logging.basicConfig(filename='fn3log.txt', level=logging.DEBUG,
+                        format='%(asctime)s %(levelname)s %(message)s',
                         datefmt='%m/%d/%Y %I:%M:%S %p')
     # Function
     try:
         logging.info('Start fn')
-        if any(input_list) < 0:  #included to use warning
+        if any(input_list) < 0:  # included to use warning
             logging.warning('Negative values in list')
             logging.debug('Values {}'.format(input_list))
         input_list = np.array(input_list)
@@ -109,16 +111,16 @@ def return_max_difference(input_list):
     except ImportError:  # redundancy
         logging.debug('Values {}'.format(input_list))
         logging.error('ImportError: Check if numpy is in virtualenv')
-        #print('Check if numpy is in virtualenv')
+        # print('Check if numpy is in virtualenv')
     except TypeError:
         logging.debug('Values {}'.format(input_list))
         logging.debug(input_list)
         logging.error('TypeError: Check if input is a list of values')
-        #print('Check if input is a list of values')
+        # print('Check if input is a list of values')
     except ValueError:
         logging.debug('Values {}'.format(input_list))
         logging.error('ValueError: Add more numbers to the list')
-        #print('Add more numbers to the list')
+        # print('Add more numbers to the list')
 
 
 if __name__ == "__main__":

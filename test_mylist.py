@@ -24,13 +24,14 @@ def test_sum():
 
 def test_min_max():
     from mylist import MyList
-    test_input_list = [[-1, 5, 8, 100], [5, -8, 9, 45, 88, 34, 65], [-5, 8.234, -99023, 342, 9.452]]
+    test_input_list = [[-1, 5, 8, 100], [5, -8, 9, 45, 88, 34, 65],
+                       [-5, 8.234, -99023, 342, 9.452]]
     test_output_values = ((100, -1), (88, -8), (342, -99023))
 
-    for count, elem in enumerate(test_input_list):  # enuerate itirate and gives the index
+    for count, elem in enumerate(test_input_list):
         test = MyList(test_input_list[count])
         assert test.output_min_max == test_output_values[count]
-        assert isinstance(test.output_min_max, tuple) == True
+        assert isinstance(test.output_min_max, tuple)  # should be true
 
     with pytest.raises(TypeError):
         MyList(['string', 'why'])
@@ -51,6 +52,5 @@ def test_max_diff():
     with pytest.raises(TypeError):  # Type error when None inputted
         MyList()
         MyList(['sing'])
-    with pytest.raises(ValueError):  # ValueError can occur when only 1 number given
+    with pytest.raises(ValueError):  # ValueError can occur when only 1 # given
         max([])  # This is where it fails in return_max_difference
-
